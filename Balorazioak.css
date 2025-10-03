@@ -1,0 +1,56 @@
+.Balorazioak{
+    float: center;
+    display: flex;
+    margin-left: 650px;
+    margin-bottom: 20px;
+}
+h1{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center  ;
+}
+.bat button{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    float:center;
+    font-size: large;
+    background-color: rgb(255, 13, 13);
+}
+.bi button{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    float:center;
+    font-size: large;
+    background-color: #e4750e;
+}
+.hiru button{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    float:center;
+    font-size: large;
+    background-color: rgb(251, 255, 13);
+}
+.lau button{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    float:center;
+    font-size: large;
+    background-color: rgb(166, 255, 13);
+}
+.bost button{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    float:center;
+    font-size: large;
+    background-color: rgb(5, 220, 9);
+}
+.koadroa textarea{
+    margin-left: 400px;
+    width: 700px;
+    height: 400px;
+}
