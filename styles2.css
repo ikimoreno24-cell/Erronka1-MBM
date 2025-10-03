@@ -3,7 +3,8 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: #c0c2cf;
-    background: linear-gradient(90deg, rgba(192, 194, 207, 0.62) 0%, rgba(3, 0, 0, 1) 0%, rgba(65, 71, 74, 1) 100%);
+    background: linear-gradient(120deg, #0f2027, #203a43, #032534);
+    background-attachment: fixed;
 }
 
 .logoa_argazkia {
@@ -21,7 +22,7 @@ header,
 .footer_nabigazioa {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 8px; 
 }
 
 .nabigazio_elementuak {
@@ -80,6 +81,7 @@ header,
     display: block;
     cursor: pointer;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.427);
 }
 
 .nabarmenak_pelikulak p {
@@ -92,7 +94,6 @@ header,
 }
 
 footer {
-    background: linear-gradient(90deg, rgba(192, 194, 207, 0.62) 0%, rgba(3, 0, 0, 1) 0%, rgba(65, 71, 74, 1) 100%);
     color: white;
     padding: 20px 0 10px 0;
     margin-top: 40px;
@@ -135,6 +136,7 @@ footer {
     cursor: pointer;
     border-radius: 8px;
     transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.427);
 }
 
 .kartelera_pelikulak img:hover {
@@ -344,4 +346,21 @@ h2 {
 .erosi {
     width: 30pxs;
     height: 30px;
+}
+
+details {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+details:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+details[open] {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.balorazio_botoiak:checked {
+    transform: scale(0.8);
 }
