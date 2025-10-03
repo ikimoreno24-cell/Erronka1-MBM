@@ -292,8 +292,56 @@ h2 {
     background-color: #16bc40;
 }
 
-.botoiak input[type="radio"]:checked + label {
-  box-shadow: 0 0 10px #000;
-  transform: scale(1.2);
-  border: 2px solid #000;
+.botoiak input[type="radio"]:checked+label {
+    box-shadow: 0 0 10px #000;
+    transform: scale(1.2);
+    border: 2px solid #000;
+}
+
+.saskia_edukia {
+    background: #f0e6e9;
+    background: radial-gradient(circle, rgba(240, 230, 233, 1) 0%, rgba(182, 202, 222, 1) 100%);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+}
+
+.saskia_edukia p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.saskia_edukia input[type="number"],
+.saskia_edukia input[type="date"],
+.saskia_edukia input[type="time"],
+.saskia_edukia select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Estilo del botón */
+.saskia_edukia .erosi {
+    background-color: #4CAF50;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.saskia_edukia .erosi:hover {
+    background-color: #1aa821;
+}
+
+.erosi {
+    width: 30pxs;
+    height: 30px;
 }

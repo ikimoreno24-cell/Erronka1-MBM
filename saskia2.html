@@ -26,8 +26,45 @@
 		<img class="hamburguesa_menua" src="img/boton_hamburguesa2.png" alt="Hamburguesa menua">
 		<h1 class="nabarmenak">SASKIA</h1>
 		<section class="saskia_edukia">
-			<p>Zure erositakoak hemen agertuko lirateke.</p>
+			<form action="saskia2.html" method="get">
+				<p>
+                    Pelikula aukeratu: <select name="pelikula_aukera">
+					<option value="pelikula1">Lilo & Stich</option>
+					<option value="pelikula2">Mufasa: El Rey León</option>
+					<option value="pelikula3">Como Entrenar a tu Dragón 3</option>
+					<option value="pelikula4">Sonic 3</option>
+					<option value="pelikula5">Capitán America: Brave New World</option>
+                    <option value="pelikula6">Blancanieves</option>
+                    <option value="pelikula7">El Casoplón</option>
+                    <option value="pelikula8">Conclave</option>
+                    <option value="pelikula9">Un Funeral de Locos</option>
+                    <option value="pelikula10">Misión Imposible: Sentencia Final</option>
+                    <option value="pelikula11">Padre No Hay Mas Que Uno 5</option>
+                    <option value="pelikula12">Sirat</option>
+                    <option value="pelikula13">Thunderbolts</option>
+                    <option value="pelikula14">Una Pelicula de Minecraft</option>
+                    <option value="pelikula15">Wolfgang</option>
+                </p>
+            </select>
+                <br>
+                <br>
+                <p>
+                    Pertsona kopurua: <input type="number" name="pertsona_kopurua" min="1" max="4"required>
+                </p>
+				<br>
+                <p>
+                    Data: <input type="date" name="data" required>
+                </p>
+                <br>
+                <p>
+                    Ordua: <input type="time" name="ordua" required>
+                </p>
+                <br>
+                <br>
+                <input class="erosi" type="image" src="img/carro.png" alt="Erosi">
+			</form>
 		</section>
+        
 	</main>
 
 	<footer>
