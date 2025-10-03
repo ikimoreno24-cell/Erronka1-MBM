@@ -1,4 +1,3 @@
-
 /* styles2.css: Estiloak X2 fitxategi berrietarako */
 
 body {
@@ -104,6 +103,7 @@ footer {
     justify-content: center;
     margin-top: 10px;
 }
+
 .sare_sozialak img {
     width: 32px;
     height: 32px;
@@ -116,7 +116,7 @@ footer {
     display: flex;
     color: white;
     gap: 24px;
-    align-items: center; 
+    align-items: center;
 }
 
 .kartelera_pelikulak {
@@ -148,7 +148,9 @@ footer {
     margin-left: 100px;
 }
 
-.kartelera_taula, td, th{
+.kartelera_taula,
+td,
+th {
     color: white;
     vertical-align: top;
 }
@@ -191,4 +193,107 @@ h2 {
     color: white;
     font-weight: 300;
     text-align: center;
+}
+
+.balorazio_botoiak {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+
+}
+
+.botoiak {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 16px;
+    margin-inline-start: 8px;
+}
+
+
+
+.idazteko_lekua {
+    margin-top: 16px;
+}
+
+.idazteko_lekua ::placeholder {
+    text-align: top;
+}
+
+.idazteko_input {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+}
+
+.bidali {
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 20px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.bidali input {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 16px;
+    margin-inline-start: 8px;
+}
+
+.botoiak input[type="radio"] {
+    display: none;
+}
+
+.botoiak label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.botoiak label:hover {
+    transform: scale(1.1);
+}
+
+.color1 {
+    background-color: #ff4d4d;
+}
+
+.color2 {
+    background-color: #ff944d;
+}
+
+.color3 {
+    background-color: #ffeb3b;
+}
+
+.color4 {
+    background-color: #4caf50;
+}
+
+.color5 {
+    background-color: #16bc40;
+}
+
+.botoiak input[type="radio"]:checked + label {
+  box-shadow: 0 0 10px #000;
+  transform: scale(1.2);
+  border: 2px solid #000;
 }
