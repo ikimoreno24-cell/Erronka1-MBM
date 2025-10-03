@@ -1,0 +1,186 @@
+
+/* styles2.css: Estiloak X2 fitxategi berrietarako */
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #c0c2cf;
+    background: linear-gradient(90deg, rgba(192, 194, 207, 0.62) 0%, rgba(3, 0, 0, 1) 0%, rgba(65, 71, 74, 1) 100%);
+}
+
+.logoa_argazkia {
+    width: 100px;
+    height: auto;
+}
+
+.ZineUsurbil {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-left: 16px;
+}
+
+header,
+.footer_nabigazioa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nabigazio_elementuak {
+    padding-left: 130px;
+    display: flex;
+    color: white;
+    gap: 24px;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.nabigazio_elementuak p {
+    margin: 0;
+    padding: 0 8px;
+    cursor: pointer;
+    align-items: right;
+}
+
+.nabigazio_elementuak a {
+    text-decoration: none;
+    color: white;
+}
+
+.nabigazio_elementuak p:hover {
+    transform: scale(1.08);
+}
+
+.nabarmenak {
+    color: white;
+    text-align: center;
+}
+
+.hamburguesa_menua {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hamburguesa_menua:hover {
+    transform: scale(1.08);
+}
+
+.nabarmenak_pelikulak {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.nabarmenak_pelikulak img {
+    width: 200px;
+    height: 300px;
+    display: block;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.nabarmenak_pelikulak p {
+    color: white;
+}
+
+.ZineUsurbil_textua {
+    text-decoration: none;
+    color: #333;
+}
+
+footer {
+    background: linear-gradient(90deg, rgba(192, 194, 207, 0.62) 0%, rgba(3, 0, 0, 1) 0%, rgba(65, 71, 74, 1) 100%);
+    color: white;
+    padding: 20px 0 10px 0;
+    margin-top: 40px;
+}
+
+.sare_sozialak {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.sare_sozialak img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin: 0 6px;
+}
+
+.nabigazio_elementuak {
+    padding-left: 130px;
+    display: flex;
+    color: white;
+    gap: 24px;
+    align-items: center; 
+}
+
+.kartelera_pelikulak {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.kartelera_pelikulak img {
+    width: 200px;
+    height: 300px;
+    display: block;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.kartelera_pelikulak img:hover {
+    transform: scale(1.08);
+    list-style-type: disc;
+}
+
+
+.kartelera_pelikulak_lista {
+    list-style: none;
+    margin-left: 100px;
+}
+
+.kartelera_taula, td, th{
+    color: white;
+    vertical-align: top;
+}
+
+.nabarmenak_pelikulak img {
+    transition: transform 0.3s ease;
+}
+
+.nabarmenak_pelikulak img:hover {
+    transform: scale(1.08);
+}
+
+.logoa_argazkia {
+    transition: transform 0.3s ease;
+}
+
+.logoa_argazkia:hover {
+    transform: scale(1.08);
+}
+
+h3 {
+    text-decoration-line: underline;
+}
+
+p {
+    text-decoration: #8c8080;
+}
+
+header {
+    border-bottom: 1px solid white;
+}
+
+footer {
+    border-top: 1px solid white;
+}
