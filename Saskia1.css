@@ -1,0 +1,55 @@
+.Karritoa{
+    float: center;
+    display: flex;
+    margin-left: 670px;
+    margin-bottom: 20px;
+}
+h1{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.bat button{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    float:center;
+    font-size: large;
+    background-color: rgb(255, 255, 255);
+}
+.bi button{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    float:center;
+    font-size: large;
+    background-color: #ffffff;
+}
+.hiru button{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    float:center;
+    font-size: large;
+    background-color: rgb(255, 255, 255);
+}
+.lau button{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    float:center;
+    font-size: large;
+    background-color: rgb(255, 255, 255);
+}
+.koadroa textarea{
+    margin-top: 50px;
+    margin-left: 680px;  
+}
+h2{
+    margin-left: 590px;
+    color: white;
+}
+.emaila{
+    margin-top: 100px;
+    margin-right: 670px;
+}

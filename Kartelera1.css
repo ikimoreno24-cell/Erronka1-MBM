@@ -1,0 +1,26 @@
+main{
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+.tabla img{
+    width: 500px;
+    height: 500px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+.tabla th{
+    text-align: left;
+    vertical-align: top;
+}
+.tabla h1{
+    text-decoration: underline;
+}
+.tabla p{
+    font-size: larger;
+}
+.entradas img{
+    width: 400px;
+    height: 400px;
+    align-content: center;
+}

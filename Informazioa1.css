@@ -1,0 +1,23 @@
+.maps{
+    margin-top: 70px;
+}
+section{
+    max-width: 600px;
+}
+main{
+    display: flex;
+}
+.deskribapena{
+    color: white;
+    margin-left: 100px;
+}
+
+.deskribapena img{
+    width: 300px;
+    height: 300px;
+}
+img{
+    width: 450px;
+    height: 300px; 
+}
+

@@ -1,0 +1,40 @@
+/*Orrialde nagusiaren CSS-a hasi*/
+main{
+    display: flex;
+    margin-top: 40px;
+}
+.mufasa img{
+    width: 400px; height: 500px;
+    margin-top: 5px;
+}
+.mufasa a{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: white;
+    display: flex;   
+}
+.camerica img{
+    margin-top: 5px;
+    width: 400px; height: 500px;
+    margin-left: 100px;
+}
+.camerica a{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: white;
+    width: 400px; height: 500px;
+    margin-left: 100px;
+    }
+.lilo img{
+    width: 400px; height: 500px;
+    margin-top: 5px;
+    margin-right: 90px;
+    }
+.lilo a{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: white;
+    width: 400px; height: 500px;
+    margin-right: 90px;
+}
+/*Orrialde nagusiaren css-a bukatu*/
