@@ -2,7 +2,6 @@ import java.util.*;
 
 public class Aplikazioa {
 
-    /* Kontsolarako koloreak */
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_GREEN = "\u001B[32m";
@@ -14,8 +13,6 @@ public class Aplikazioa {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        /*Birfaktorizazioa: 60, 65 eta 101 lerroetan */
-        
         ArrayList<String> pelikulak = new ArrayList<>();
         ArrayList<String> gelak = new ArrayList<>();
 
@@ -41,86 +38,126 @@ public class Aplikazioa {
         gelak.add("Zientzia fikziozko gela");
         gelak.add("Komedia gela");
 
-        /* Menu nagusia kolorearekin*/
-        System.out.println(ANSI_CYAN + "Zein ikusi nahi duzu: \n" +
-                "1. Aste eguna \n" +
-                "2. Pelikulen informazio orokorra \n" +
-                "3. Kokapena \n" +
-                "4. Irekiera ordutegia \n" +
-                "5. Irten" + ANSI_RESET);
+        boolean errepikatu = true;
 
-        int aukera = sc.nextInt();
+        while (errepikatu) {
+            System.out.println(ANSI_CYAN + "\nZein ikusi nahi duzu: \n" +
+                    "1. Aste eguna \n" +
+                    "2. Pelikulen informazio orokorra \n" +
+                    "3. Kokapena \n" +
+                    "4. Irekiera ordutegia \n" +
+                    "5. Irten" + ANSI_RESET);
 
-        switch (aukera) {
-            case 1:
-                System.out.println(ANSI_YELLOW + "Aukeratu: (1) Astelehena  + (2) Osteguna" + ANSI_RESET);
-                int aukeraEguna = sc.nextInt();
+            System.out.print("Aukeratu aukera bat: ");
+            int aukera = sc.nextInt();
 
-                if (aukeraEguna == 1) {
-                    System.out.println(ANSI_GREEN + "Asteleheneko pelikulak:" + ANSI_RESET);
-                    for (int i = 0; i < 7; i++) {
-                        System.out.println(pelikulak.get(i));
+            switch (aukera) {
+                case 1:
+                    System.out.println(ANSI_YELLOW + "Aukeratu: (1) Astelehena  + (2) Osteguna" + ANSI_RESET);
+                    int aukeraEguna = sc.nextInt();
+
+                    if (aukeraEguna == 1) {
+                        System.out.println(ANSI_GREEN + "Asteleheneko pelikulak:" + ANSI_RESET);
+                        for (int i = 0; i < 7; i++) {
+                            System.out.println(pelikulak.get(i));
+                        }
+                    } else if (aukeraEguna == 2) {
+                        System.out.println(ANSI_GREEN + "Osteguneko pelikulak:" + ANSI_RESET);
+                        for (int i = 7; i < 15; i++) {
+                            System.out.println(pelikulak.get(i));
+                        }
                     }
-                } else if (aukeraEguna == 2) {
-                    System.out.println(ANSI_GREEN + "Osteguneko pelikulak:" + ANSI_RESET);
-                    for (int i = 7; i < 15; i++) {
-                        System.out.println(pelikulak.get(i));
+
+                    System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
+                    int aukeraSarrera = sc.nextInt();
+
+                    if (aukeraSarrera == 1) {
+                        for (int i = 0; i < pelikulak.size(); i++) {
+                            System.out.println(ANSI_RED + i + " - " + pelikulak.get(i) + ANSI_RESET);
+                        }
+                        System.out.println("Zein pelikula ikusi nahi duzu? (Zenbakia aukeratu)");
+                        int pelikulaIkusi = sc.nextInt();
+
+                        double prezioa = 8.50;
+                        System.out.println("Zenbat pertsona zarete? (1etik 4ra gehienez)");
+                        int pertsonaKop = sc.nextInt();
+
+                        if (pertsonaKop < 1 || pertsonaKop > 4) {
+                            System.out.println(
+                                    ANSI_RED + "ERROREA: Mesedez 1 eta 4 arteko zenbaki bat sartu." + ANSI_RESET);
+                        } else {
+                            double guztira = prezioa * pertsonaKop;
+                            System.out.println(ANSI_GREEN + pelikulak.get(pelikulaIkusi)
+                                    + " pelikula ikusteko sarrera erosi duzu, "
+                                    + guztira + "€ ordaindu behar dira." + ANSI_RESET);
+                        }
                     }
+                    break;
+
+                case 2:
+                    System.out.println(ANSI_BLUE + "\nPelikulen lista: " + ANSI_RESET + pelikulak + "\n");
+                    System.out.println(ANSI_PURPLE + "Pelikula kopurua: " + ANSI_RESET + pelikulak.size() + "\n");
+                    System.out.println(ANSI_BLUE + "Gelak: " + ANSI_RESET + gelak + "\n");
+                    System.out.println(ANSI_PURPLE + "Gela kopurua: " + ANSI_RESET + gelak.size() + "\n");
+
+                    System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
+                    int aukeraSarrera2 = sc.nextInt();
+
+                    if (aukeraSarrera2 == 1) {
+                        for (int i = 0; i < pelikulak.size(); i++) {
+                            System.out.println(ANSI_RED + i + " - " + pelikulak.get(i) + ANSI_RESET);
+                        }
+                        System.out.println("Zein pelikula ikusi nahi duzu? (Zenbakia aukeratu)");
+                        int pelikulaIkusi = sc.nextInt();
+
+                        double prezioa = 8.50;
+                        System.out.println("Zenbat pertsona zarete? (1etik 4ra gehienez)");
+                        int pertsonaKop = sc.nextInt();
+
+                        if (pertsonaKop < 1 || pertsonaKop > 4) {
+                            System.out.println(
+                                    ANSI_RED + "ERROREA: Mesedez 1 eta 4 arteko zenbaki bat sartu." + ANSI_RESET);
+                        } else {
+                            double guztira = prezioa * pertsonaKop;
+                            System.out.println(ANSI_GREEN + pelikulak.get(pelikulaIkusi)
+                                    + " pelikula ikusteko sarrera erosi duzu, "
+                                    + guztira + "€ ordaindu behar dira." + ANSI_RESET);
+                        }
+                    } 
+                    
+                    break;
+
+                case 3:
+                    System.out.println(ANSI_CYAN + "\nKokapena:" + ANSI_RESET);
+                    System.out.println("Usurbilen kokatzen gara, Errekatxiki kalean konkretuki. \n" +
+                            "Mapseko link-a: https://maps.app.goo.gl/LYmgyRZZ584R61nG9\n");
+
+                    break;
+
+                case 4:
+                    System.out.println(ANSI_GREEN + "Ordutegia:" + ANSI_RESET);
+                    System.out.println("Astelehenak: 12:00 - 00:00 \nOsteguna: 16:00 - 00:00 \n");
+
+                    break;
+
+                case 5:
+                    System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
+                    errepikatu = false;
+                    return;
+
+                default:
+                    System.out.println(ANSI_RED + "Aukera ez da baliozkoa!" + ANSI_RESET);
+            }
+            if (errepikatu) {
+                System.out.println(ANSI_YELLOW + "\nBeste zerbait egin nahi duzu? bai(1) ez(2)" + ANSI_RESET);
+                int jarraitu = sc.nextInt();
+                if (jarraitu != 1) {
+                    System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
+                    errepikatu = false;
                 }
-                break;
 
-            case 2:
-                System.out.println(ANSI_BLUE + "\nPelikulen lista: " + ANSI_RESET + pelikulak + "\n");
-                System.out.println(ANSI_PURPLE + "Pelikula kopurua: " + ANSI_RESET + pelikulak.size() + "\n");
-                System.out.println(ANSI_BLUE + "Gelak: " + ANSI_RESET + gelak + "\n");
-                System.out.println(ANSI_PURPLE + "Gela kopurua: " + ANSI_RESET + gelak.size() + "\n");
-                break;
-
-            case 3:
-                System.out.println(ANSI_CYAN + "\nKokapena:" + ANSI_RESET);
-                System.out.println("Usurbilen kokatzen gara, Errekatxiki kalean konkretuki. \n" +
-                        "Mapseko link-a: https://maps.app.goo.gl/LYmgyRZZ584R61nG9\n");
-                break;
-
-            case 4:
-                System.out.println(ANSI_GREEN + "Ordutegia:" + ANSI_RESET);
-                System.out.println("Astelehenak: 12:00 - 00:00 \nOsteguna: 16:00 - 00:00 \n");
-                break;
-
-            case 5:
-                System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
-                break;
-
-            default:
-                System.out.println(ANSI_RED + "Aukera ez da baliozkoa!" + ANSI_RESET);
-        }
-
-        System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
-        int aukeraSarrera = sc.nextInt();
-
-        if (aukeraSarrera == 1) {
-            for (int i = 0; i < pelikulak.size(); i++) {
-                System.out.println(ANSI_RED + i + " - " + pelikulak.get(i) + ANSI_RESET);
             }
-            System.out.println("Zein pelikula ikusi nahi duzu? (Zenbakia aukeratu)");
-            int pelikulaIkusi = sc.nextInt();
-
-            double prezioa = 8.50;
-            System.out.println("Zenbat pertsona zarete? (1etik 4ra gehienez)");
-            int pertsonaKop = sc.nextInt();
-
-            if (pertsonaKop < 1 || pertsonaKop > 4) {
-                System.out.println(ANSI_RED + "ERROREA: Mesedez 1 eta 4 arteko zenbaki bat sartu." + ANSI_RESET);
-            } else {
-                double guztira = prezioa * pertsonaKop;
-                System.out.println(ANSI_GREEN + pelikulak.get(pelikulaIkusi)
-                        + " pelikula ikusteko sarrera erosi duzu, "
-                        + guztira + "€ ordaindu behar dira." + ANSI_RESET);
-            }
-        } else {
-            System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
         }
-
         sc.close();
     }
 }
