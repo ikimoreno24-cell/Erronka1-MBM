@@ -1,3 +1,6 @@
+/*BIRFAKTORIZAZIOA: 44, 62, 67 lerroetan eta switch barruan dagoen 2. kasua (case 2) estruktura berdina du.
+ * 44. lerroa: boolean bat sortzen dugu era horretan 
+ */
 import java.util.*;
 
 public class Aplikazioa {
