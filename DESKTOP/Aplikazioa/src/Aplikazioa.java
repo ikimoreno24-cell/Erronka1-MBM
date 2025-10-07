@@ -14,6 +14,8 @@ public class Aplikazioa {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        /*Birfaktorizazioa: 60, 65 eta 101 lerroetan */
+        
         ArrayList<String> pelikulak = new ArrayList<>();
         ArrayList<String> gelak = new ArrayList<>();
 
@@ -39,7 +41,7 @@ public class Aplikazioa {
         gelak.add("Zientzia fikziozko gela");
         gelak.add("Komedia gela");
 
-        /* Menu principal con color */
+        /* Menu nagusia kolorearekin*/
         System.out.println(ANSI_CYAN + "Zein ikusi nahi duzu: \n" +
                 "1. Aste eguna \n" +
                 "2. Pelikulen informazio orokorra \n" +
