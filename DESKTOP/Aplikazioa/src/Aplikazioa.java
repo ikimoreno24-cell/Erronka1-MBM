@@ -77,13 +77,29 @@ public class Aplikazioa {
                     }
                 }
 
-                break;
+                
 
                 case 2: 
                 System.out.println("\n Pelikulen lista: \n" + pelikulak + "\n");
                 System.out.println("Pelikula kopurua: " + pelikulak.size() + "\n");
                 System.out.println("Gelak: " + gelak + "\n");
                 System.out.println("Gela kopurua: " + gelak.size() + "\n");
+
+                break;
+
+                case 3: 
+
+                System.out.println("Informazioa");
+
+                break;
+
+                case 4:
+
+                System.out.println("Ordutegia");
+
+                break;
+
+                case 5:
 
                 break;
 
