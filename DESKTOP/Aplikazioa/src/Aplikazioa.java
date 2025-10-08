@@ -84,7 +84,7 @@ public class Aplikazioa {
                         int pelikulaIkusi = sc.nextInt();
 
                         double prezioa = 8.50;
-                        System.out.println("Zenbat pertsona zarete? (1etik 4ra gehienez)");
+                        System.out.println("Zenbat sarrera erosi nahi dituzu? (1etik 4ra gehienez)");
                         int pertsonaKop = sc.nextInt();
 
                         if (pertsonaKop < 1 || pertsonaKop > 4) {
