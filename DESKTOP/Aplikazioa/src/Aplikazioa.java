@@ -15,6 +15,10 @@ public class Aplikazioa {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
 
+    static String agurra(){
+        return "Kaixo ongi etorriakm Zine Usurbil enpresara.";
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -160,6 +164,7 @@ public class Aplikazioa {
                     System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
                     errepikatu = false;
                 }
+
 
             }
         }
