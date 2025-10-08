@@ -5,8 +5,8 @@ public class testaplikazioa1 {
 
     @Test
     public void testagurra(){
-         String agurra = Aplikazioa.agurra();
-         assertEquals("Kaixo, ongi etorri Zinema Usurbil enpresara", agurra);
+         String agurra1 = Aplikazioa.agurra1();
+         assertEquals("Kaixo, ongi etorri Zinema Usurbil enpresara, enpresako lehenengo kidea naiz, Iker", agurra1);
          
     }
    
