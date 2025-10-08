@@ -53,7 +53,7 @@ public class Aplikazioa {
                     "4. Irekiera ordutegia \n" +
                     "5. Irten" + ANSI_RESET);
 
-            System.out.print("Aukeratu aukera bat: ");
+            System.out.print("Aukeratu bat: ");
             int aukera = sc.nextInt();
 
             switch (aukera) {
