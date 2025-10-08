@@ -14,6 +14,9 @@ public class Aplikazioa {
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
+    static String agurra(){
+        return "Kaixo, ongi etorri Zinema Usurbil enpresara";
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
