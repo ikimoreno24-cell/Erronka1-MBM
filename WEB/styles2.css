@@ -370,3 +370,23 @@ details:hover {
 details[open] {
     background: rgba(255, 255, 255, 0.2);
 }
+
+.informazioa_testua {
+    color: white;
+    margin-left: 100px;
+}
+
+.informazioa_testua >.avatar {
+    width: 300px;
+    height: 500px;
+}
+
+.entradas {
+    width: 300px;
+    height: 200px;
+}
+
+.maps {
+    align-content: center;
+    display: flex;
+}
