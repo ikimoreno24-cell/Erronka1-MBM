@@ -1,12 +1,17 @@
-
-/*BIRFAKTORIZAZIOA: 54, 72, 77, 87 lerroetan eta switch barruan dagoen 2. kasua (case 2) estruktura berdina du.
- * 54. lerroa: boolean hasieratzen dugu, era horretan 57. lerroan dagoen while bat sortzeko switch kasuak amaitzen direnean berriz hasierako menua bistaratzeko, bukle moduko bat sortuz. Horretarako 157. lerroan if batekin baldintza sortzen dugu.
- * 72, 77 eta 87. lerroak: for erabiliz pelikulak eskuz hasieratu beharrean, listatik adierazitako posizioen pelikulak ateratzen ditugu, programa era errazago batean kodetuz.
- */
 import java.util.*;
 
+/**
+ * Zinema aplikazioa — pelikulak, gelak eta ordutegia erakusten ditu.
+ */
+/**
+ * Birfaktorizazioa:
+ * 42 eta 48 lerroak: pelikulak listan sartzeko pelikulak.add erabili beharrean
+ * denbora guztian, Arrays.asList erabili dugu adierazitako pelikula guztiak
+ * sartzeko komando errepikakorra izan gabe. Gelak lista kasuan berdina.
+ */
 public class Aplikazioa {
 
+    /** Kolore kodeak kontsolarako. */
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_GREEN = "\u001B[32m";
@@ -15,161 +20,91 @@ public class Aplikazioa {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
 
-    static String agurra1(){
-        return "Kaixo, ongi etorri Zinema Usurbil enpresara, enpresako lehenengo kidea naiz, Iker";
+    /** Agurra 1. */
+    static String agurra1() {
+        return "Kaixo, ongi etorri Zinema Usurbilera, ni Iker naiz.";
     }
 
-    static String agurra2(){
-        return "Kaixo ongi etorria Zine Usurbil enpresara, enpresako bigarren kidea naiz, Urko.";
+    /** Agurra 2. */
+    static String agurra2() {
+        return "Kaixo, ongi etorri Zine Usurbilera, ni Urko naiz.";
     }
 
+    /**
+     * Programa nagusia — menua eta aukerak.
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        ArrayList<String> pelikulak = new ArrayList<>();
-        ArrayList<String> gelak = new ArrayList<>();
+        /**
+         * Pelikula eta gela zerrendak.
+         */
+        ArrayList<String> pelikulak = new ArrayList<>(Arrays.asList(
+                "Lilo y Stich", "Una Pelicula de Minecraft", "Mufasa: El Rey Leon",
+                "Como Entrenar a tu Dragon", "Capitan America: Brave New World",
+                "Conclave", "Sonic 3", "Mision Imposible", "Blancanieves", "Thunderbolt",
+                "Padre No Hay Mas Que Uno 5", "Wolfgang", "El Casoplon", "Un Funeral de Locos", "Sirat"));
 
-        pelikulak.add("Lilo y Stich");
-        pelikulak.add("Una Pelicula de Minecraft");
-        pelikulak.add("Mufasa: El Rey Leon");
-        pelikulak.add("Como Entrenar a tu Dragon");
-        pelikulak.add("Capitan America: Brave New World");
-        pelikulak.add("Conclave");
-        pelikulak.add("Sonic 3: La Pelicula");
-        pelikulak.add("Mision Imposible: Sentencia Final");
-        pelikulak.add("Blancanieves");
-        pelikulak.add("Thunderbolt");
-        pelikulak.add("Padre No Hay Mas Que Uno 5");
-        pelikulak.add("Wolfgang (Extraordinario)");
-        pelikulak.add("El Casoplon");
-        pelikulak.add("Un Funeral de Locos");
-        pelikulak.add("Sirat");
-
-        gelak.add("Umeen gela");
-        gelak.add("Superheroien gela");
-        gelak.add("Thriller gela");
-        gelak.add("Zientzia fikziozko gela");
-        gelak.add("Komedia gela");
+        ArrayList<String> gelak = new ArrayList<>(Arrays.asList(
+                "Umeen gela", "Superheroien gela", "Thriller gela", "Zientzia fikzioa", "Komedia gela"));
 
         boolean errepikatu = true;
 
+        /** Menu nagusia. */
         while (errepikatu) {
-            System.out.println(ANSI_CYAN + "\nZein ikusi nahi duzu: \n" +
-                    "1. Aste eguna \n" +
-                    "2. Pelikulen informazio orokorra \n" +
-                    "3. Kokapena \n" +
-                    "4. Irekiera ordutegia \n" +
-                    "5. Irten" + ANSI_RESET);
-
-            System.out.print("Aukeratu bat: ");
+            System.out.println(
+                    ANSI_CYAN + "\n1. Aste eguna\n2. Pelikulak\n3. Kokapena\n4. Ordutegia\n5. Irten" + ANSI_RESET);
+            System.out.print("Aukeratu: ");
             int aukera = sc.nextInt();
 
             switch (aukera) {
+                /** Asteko egunaren arabera pelikulak. */
                 case 1:
-                    System.out.println(ANSI_YELLOW + "Aukeratu: (1) Astelehena  + (2) Osteguna" + ANSI_RESET);
-                    int aukeraEguna = sc.nextInt();
-
-                    if (aukeraEguna == 1) {
-                        System.out.println(ANSI_GREEN + "Asteleheneko pelikulak:" + ANSI_RESET);
-                        for (int i = 0; i < 7; i++) {
+                    System.out.println(ANSI_YELLOW + "Aukeratu: (1) Astelehena / (2) Osteguna" + ANSI_RESET);
+                    int eguna = sc.nextInt();
+                    if (eguna == 1) {
+                        for (int i = 0; i < 7; i++)
                             System.out.println(pelikulak.get(i));
-                        }
-                    } else if (aukeraEguna == 2) {
-                        System.out.println(ANSI_GREEN + "Osteguneko pelikulak:" + ANSI_RESET);
-                        for (int i = 7; i < 15; i++) {
+                    } else {
+                        for (int i = 7; i < pelikulak.size(); i++)
                             System.out.println(pelikulak.get(i));
-                        }
-                    }
-
-                    System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
-                    int aukeraSarrera = sc.nextInt();
-
-                    if (aukeraSarrera == 1) {
-                        for (int i = 0; i < pelikulak.size(); i++) {
-                            System.out.println(ANSI_RED + i + " - " + pelikulak.get(i) + ANSI_RESET);
-                        }
-                        System.out.println("Zein pelikula ikusi nahi duzu? (Zenbakia aukeratu)");
-                        int pelikulaIkusi = sc.nextInt();
-
-                        double prezioa = 8.50;
-                        System.out.println("Zenbat sarrera erosi nahi dituzu? (1etik 4ra gehienez)");
-                        int pertsonaKop = sc.nextInt();
-
-                        if (pertsonaKop < 1 || pertsonaKop > 4) {
-                            System.out.println(
-                                    ANSI_RED + "ERROREA: Mesedez 1 eta 4 arteko zenbaki bat sartu." + ANSI_RESET);
-                        } else {
-                            double guztira = prezioa * pertsonaKop;
-                            System.out.println(ANSI_GREEN + pelikulak.get(pelikulaIkusi)
-                                    + " pelikula ikusteko sarrera erosi duzu, "
-                                    + guztira + "€ ordaindu behar dira." + ANSI_RESET);
-                        }
                     }
                     break;
 
+                /** Pelikulak eta gelak erakutsi. */
                 case 2:
-                    System.out.println(ANSI_BLUE + "\nPelikulen lista: " + ANSI_RESET + pelikulak + "\n");
-                    System.out.println(ANSI_PURPLE + "Pelikula kopurua: " + ANSI_RESET + pelikulak.size() + "\n");
-                    System.out.println(ANSI_BLUE + "Gelak: " + ANSI_RESET + gelak + "\n");
-                    System.out.println(ANSI_PURPLE + "Gela kopurua: " + ANSI_RESET + gelak.size() + "\n");
-
-                    System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
-                    int aukeraSarrera2 = sc.nextInt();
-
-                    if (aukeraSarrera2 == 1) {
-                        for (int i = 0; i < pelikulak.size(); i++) {
-                            System.out.println(ANSI_RED + i + " - " + pelikulak.get(i) + ANSI_RESET);
-                        }
-                        System.out.println("Zein pelikula ikusi nahi duzu? (Zenbakia aukeratu)");
-                        int pelikulaIkusi = sc.nextInt();
-
-                        double prezioa = 8.50;
-                        System.out.println("Zenbat pertsona zarete? (1etik 4ra gehienez)");
-                        int pertsonaKop = sc.nextInt();
-
-                        if (pertsonaKop < 1 || pertsonaKop > 4) {
-                            System.out.println(
-                                    ANSI_RED + "ERROREA: Mesedez 1 eta 4 arteko zenbaki bat sartu." + ANSI_RESET);
-                        } else {
-                            double guztira = prezioa * pertsonaKop;
-                            System.out.println(ANSI_GREEN + pelikulak.get(pelikulaIkusi)
-                                    + " pelikula ikusteko sarrera erosi duzu, "
-                                    + guztira + "€ ordaindu behar dira." + ANSI_RESET);
-                        }
-                    }
-
+                    System.out.println(ANSI_BLUE + "\nPelikulak: " + pelikulak + ANSI_RESET);
+                    System.out.println(ANSI_PURPLE + "Gelak: " + gelak + ANSI_RESET);
                     break;
 
+                /** Kokapena erakutsi. */
                 case 3:
-                    System.out.println(ANSI_CYAN + "\nKokapena:" + ANSI_RESET);
-                    System.out.println("Usurbilen kokatzen gara, Errekatxiki kalean konkretuki. \n" +
-                            "Mapseko link-a: https://maps.app.goo.gl/LYmgyRZZ584R61nG9\n");
-
+                    System.out.println(ANSI_CYAN + "Usurbil, Errekatxiki kalea." + ANSI_RESET);
                     break;
 
+                /** Ordutegia erakutsi. */
                 case 4:
-                    System.out.println(ANSI_GREEN + "Ordutegia:" + ANSI_RESET);
-                    System.out.println("Astelehenak: 12:00 - 00:00 \nOsteguna: 16:00 - 00:00 \n");
-
+                    System.out.println(ANSI_GREEN + "Astelehena: 12:00–00:00 / Osteguna: 16:00–00:00" + ANSI_RESET);
                     break;
 
+                /** Irten. */
                 case 5:
                     System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
                     errepikatu = false;
-                    return;
+                    break;
 
+                /** Errorea. */
                 default:
                     System.out.println(ANSI_RED + "Aukera ez da baliozkoa!" + ANSI_RESET);
             }
+
+            /** Buklea jarraitu edo amaitu. */
             if (errepikatu) {
                 System.out.println(ANSI_YELLOW + "\nBeste zerbait egin nahi duzu? bai(1) ez(2)" + ANSI_RESET);
-                int jarraitu = sc.nextInt();
-                if (jarraitu != 1) {
+                if (sc.nextInt() != 1) {
                     System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
                     errepikatu = false;
                 }
-
-
             }
         }
         sc.close();
