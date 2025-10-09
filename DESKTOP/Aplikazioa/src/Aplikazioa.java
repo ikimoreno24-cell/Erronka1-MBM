@@ -1,7 +1,7 @@
 
-/*BIRFAKTORIZAZIOA: 44, 66, 71 lerroetan eta switch barruan dagoen 2. kasua (case 2) estruktura berdina du.
- * 44. lerroa: boolean hasieratzen dugu, era horretan 57. lerroan dagoen while bat sortzeko switch kasuak amaitzen direnean berriz hasierako menua bistaratzeko, bukle moduko bat sortuz. Horretarako 157. lerroan if batekin baldintza sortzen dugu.
- * 66 eta 71. lerroak: for erabiliz bi egunetako pelikulen planteamenduak egiten dira eta pelikulak eskuz hasieratu beharrean, listatik adierazitako posizioen pelikulak ateratzen ditugu, programa era errazago batean kodetuz.
+/*BIRFAKTORIZAZIOA: 54, 72, 77, 87 lerroetan eta switch barruan dagoen 2. kasua (case 2) estruktura berdina du.
+ * 54. lerroa: boolean hasieratzen dugu, era horretan 57. lerroan dagoen while bat sortzeko switch kasuak amaitzen direnean berriz hasierako menua bistaratzeko, bukle moduko bat sortuz. Horretarako 157. lerroan if batekin baldintza sortzen dugu.
+ * 72, 77 eta 87. lerroak: for erabiliz pelikulak eskuz hasieratu beharrean, listatik adierazitako posizioen pelikulak ateratzen ditugu, programa era errazago batean kodetuz.
  */
 import java.util.*;
 
