@@ -390,3 +390,28 @@ details[open] {
     align-content: center;
     display: flex;
 }
+
+.mapa_eta_testua {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 40px;
+	flex-wrap: wrap; 
+	margin: 30px auto;
+}
+
+.mapa_eta_testua .maps iframe {
+	width: 100%;
+	max-width: 600px;
+	border-radius: 10px;
+}
+
+.mapa_testua {
+	max-width: 600px;
+	line-height: 1.6;
+}
+
+.mapa_testua p {
+	padding: 20px;
+	border-radius: 12px;
+}
