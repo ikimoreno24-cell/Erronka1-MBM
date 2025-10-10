@@ -30,6 +30,10 @@ public class Aplikazioa {
         return "Kaixo, ongi etorri Zine Usurbilera, ni Urko naiz.";
     }
 
+    /*Agurra 3 */
+    static String agurra3() {
+        return "\"Kaixo ongi etorria Zine Usurbil enpresara, enpresako bigarren kidea naiz, Ierai.";
+    }
     /**
      * Programa nagusia — menua eta aukerak.
      */
